@@ -4,6 +4,9 @@ matrix:
   include:
     - python: "3.5"
       env: LTD_MASON_BUILD=true
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y pandoc
 install:
   - pip install -r requirements.txt
   - pip install "ltd-mason>=0.2,<0.3"

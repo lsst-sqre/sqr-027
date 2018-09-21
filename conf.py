@@ -15,6 +15,9 @@ with open(metadata_path, 'r') as f:
 g = globals()
 g.update(confs)
 
+extensions += ['nbsphinx']
+
+nbsphinx_execute = 'never'
 # Add intersphinx inventories as needed
 # http://www.sphinx-doc.org/en/stable/ext/intersphinx.html
 # Example:
